@@ -38,6 +38,12 @@ body {
     position: relative;
     list-style: none;
     width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.navigation ul li.active {
+    background-color: #fff;
 }
 
 .navigation ul li a {
@@ -47,6 +53,10 @@ body {
     width: 100%;
     display: flex;
     color: #fff;
+}
+
+.navigation ul li.active a {
+    color: black ;
 }
 
 .navigation ul li a .icon {
