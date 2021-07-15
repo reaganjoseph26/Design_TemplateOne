@@ -8,9 +8,47 @@
     <title>Template One</title>
 </head>
 <body>
-    <section>
+    <section class="hero-enter">
         <h1>Enter</h1>
     </section>
+
+    <section class="cards-container">
+        <div class="card">
+            <!-- <div class="face front">
+                <h2>Front</h2>
+            </div>
+            <div class="face back">
+                <h2>Back</h2>
+            </div> -->
+
+            <div class="content">
+                <h2>01</h2>
+                <h3>Card One</h3>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quo doloremque ut? Consequuntur optio hic, fugit inventore iusto nulla facere dolores assumenda rem nemo veritatis, repudiandae rerum? Facere, in unde.</p>
+                <a href="" class="card-links">Read More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="content">
+                <h2>02</h2>
+                <h3>Card One</h3>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quo doloremque ut? Consequuntur optio hic, fugit inventore iusto nulla facere dolores assumenda rem nemo veritatis, repudiandae rerum? Facere, in unde.</p>
+                <a href="" class="card-links">Read More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="content">
+                <h2>03</h2>
+                <h3>Card One</h3>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quo doloremque ut? Consequuntur optio hic, fugit inventore iusto nulla facere dolores assumenda rem nemo veritatis, repudiandae rerum? Facere, in unde.</p>
+                <a href="" class="card-links">Read More</a>
+            </div>
+        </div>
+
+    </section>
+
     <!-- <div class="navigation">
         <ul>
             <li class="list active">
@@ -65,8 +103,17 @@
         <ion-icon name="close-outline" class="close"></ion-icon>
     </div> -->
 
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
+    <script type="text/javascript" src="assets/js/vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".card"),{
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 1,
+        });
+        </script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
