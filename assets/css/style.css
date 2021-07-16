@@ -8,19 +8,31 @@
     outline: none;
 }
 
-body {
-    min-height: 100vh;
-    background-color: #fff;
-    overflow-x: hidden ;
+/* Color Scheme*/
+:root {
+    --white: #fff;
+    --lightgray: #d3d3d3;
+    --orange: #EE7752;
+    --turquoise: #70a5a1;
+    --black: #000000;
+    --blue: #0000ff;
 }
 
 /* Dark Mode */
 
 .dark {
-    --black:#fff;
-    --black2: #444;
-    --white: #333;
-    --white2: #444;
+    --white: #fff;
+    --lightgray: #000000;
+    --orange: #70a5a1;
+    --turquoise: #EE7752;
+    --black: #fff;
+    --blue: #0000ff;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--white);
+    overflow-x: hidden ;
 }
 
 /* Side Navigation*/
@@ -182,8 +194,8 @@ ion-icon {
 .hero-enter {
     width: 100%;
     height: 100vh;
-    color: #fff;
-    background: linear-gradient(-45deg, #EE7752, #70a5a1, black, blue);
+    color: var(--white);
+    background: linear-gradient(-45deg, var(--orange), var(--turquoise), var(--black), var(--blue));
     position: relative;
     background-size: 400% 400%;
     animation: change 10s ease-out infinite;
@@ -192,7 +204,7 @@ ion-icon {
 .animation-h1 {
     text-transform: uppercase;
     letter-spacing: 2px;
-    border: 2px solid #fff;
+    border: 2px solid var(--white);
     padding: 5rem 10rem; 
     position: absolute;
     top: 50%;
@@ -223,7 +235,7 @@ ion-icon {
     justify-content: center;
     position: relative;
     flex-wrap: wrap;
-    background: linear-gradient(-45deg, #EE7752, #70a5a1, black, blue);
+    background: linear-gradient(-45deg, var(--orange), var(--turquoise), var(--black), var(--blue));
     z-index: 1;
 }
 
@@ -254,9 +266,9 @@ ion-icon {
     display: inline-block;
     padding: 20px 8px;
     margin-top: 15px;
-    background-color: #fff;
+    background-color: var(--white);
     border-radius: 20px;
-    color: black;
+    color: var(--black);
     text-decoration: none;
     font-weight: 500;
     box-shadow: 0 5px 15px rgba(0, 0, 0 , 0.2);
@@ -270,7 +282,7 @@ ion-icon {
 }
 
 .enter-link {
-    color: #fff;
+    color: var(--white);
 }
 
 .card-h2{
@@ -284,7 +296,7 @@ ion-icon {
 
 .card-h3 {
     font-size: 1.8em;
-    color: black;
+    color: var(--black);
     z-index: 1;
 
 }
@@ -310,26 +322,26 @@ ion-icon {
     position: relative;
     width: 100%;
     left: 0;
-    background-color: lightgray;
+    background-color: var(--lightgray);
 }
 
 .header-link {
     text-decoration: none;
     height: 40px;
     width: 40px;
-    background-color: #70a5a1;
+    background-color: var(--turquoise);
     display: inline-block;
     line-height: 40px;
     text-align: center;
     font-size: 24px;
-    border: 2px solid #fff;
-    color:#fff;
+    border: 2px solid var(--white);
+    color: var(--white);
     font-weight: 100;
     border-radius: 50%;
     text-transform: uppercase;
 }
 
-.header .hamburger-btn {
+.theme-switch {
     height: 40px;
     width: 40px;
     display: flex;
@@ -342,33 +354,27 @@ ion-icon {
     transition: all 0.3s ease;
 }
 
-.hamburger-btn span {
-    display: block;
-    height: 2px;
-    width: 16px;
-    background-color: black;
-    position: relative;
-    cursor: pointer;
-    pointer-events: all;
+.theme-switch:before  {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f186";
 }
 
-.hamburger-btn span:before, .hamburger-btn span:after{
-    content: '';
+.dark .theme-switch:before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f185';
+    color: var(--turquoise);
+    box-shadow: 0 0 5px;
+}
+
+.theme-switch:after {
     position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
+    font-size: 0.7em;
+    left: 40px;
+    color: var(--black);
+    white-space: nowrap;
+    font-weight: bold;
+    pointer-events: none;
 }
-
-.hamburger-btn span:before {
-    top: -4px;
-}
-
-.hamburger-btn span:after {
-    top: 4px;
-}
-
 
 .hover-in-shadow {
     position: relative;
@@ -376,7 +382,7 @@ ion-icon {
 }
 
 .hover-in-shadow:hover {
-    box-shadow: 0 0 5px #EE7752 ;
+    box-shadow: 0 0 5px var(--orange) ;
 }
 
 .hover-in-shadow:after {
@@ -483,7 +489,7 @@ ul {
 .home-section .full-screen {
     padding: 50px 0;
     min-height: 100vh;
-    background-color: lightgray;
+    background-color: var(--lightgray);
 }
 
 .align-items-center {
@@ -501,19 +507,23 @@ ul {
 }
 .home-section .home-text p{
     font-size: 18px;
+    font-weight: 300;
     text-transform: capitalize;
     margin: 0;
+    color: var(--black)
 }
 .home-section .home-text .home-h2 {
     font-size: 55px;
     font-weight: 600;
     margin: 0;
+    color: var(--black);
 }
 
 .home-section .home-text .home-h1 {
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 300;
     margin: 0;
+    color: var(--black);
 }
 
 .home-section .home-img .img-box{
@@ -540,7 +550,7 @@ ul {
 .effect-1 {
     width: 30px;
     height: 30px;
-    border: 4px solid #EE7752;
+    border: 4px solid var(--orange);
     right: 10%;
     bottom: 10%;
     animation: spin 10s linear infinite;
@@ -588,14 +598,14 @@ ul {
 .effect-2 div {
     height: 3px;
     width: 3px;
-    background-color: #EE7752;
+    background-color: var(--orange);
     margin: 0 3px 8px;
 }
 
 .effect-3 {
     width: 180px;
     height: 180px;
-    border: 25px solid #70a5a1;
+    border: 25px solid var(--turquoise);
     border-radius: 50%;
     left: 50%;
     top: -120px;
@@ -604,7 +614,7 @@ ul {
 
 .effect-4 {
     border-top: 30px solid transparent;
-    border-left: 30px solid #fff;
+    border-left: 30px solid var(--white);
     left: 30%;
     top: 30%;
     animation: spin 15s linear infinite;
@@ -612,7 +622,7 @@ ul {
 
 .effect-4:before {
     border-top: 30px solid transparent;
-    border-left: 30px solid #fff;
+    border-left: 30px solid var(--white);;
     content: '';
     position: absolute;
     left: -35px;
