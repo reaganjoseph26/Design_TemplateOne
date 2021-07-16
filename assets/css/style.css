@@ -190,7 +190,6 @@ ion-icon {
 }
 
 .animation-h1 {
-    font-size: 5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     border: 2px solid #fff;
@@ -402,7 +401,7 @@ ul {
 }
 
 /* None side nav*/
-.nav-menu {
+/* .nav-menu {
     position: fixed;
     background-color: lightgray;
     padding: 0 15px;
@@ -475,7 +474,7 @@ ul {
 
 .inner-shadow {
     box-shadow: 0 0 5px 0  #EE7752;
-}
+} */
 
 /* home section*/
 .home-section {
