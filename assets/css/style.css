@@ -33,7 +33,7 @@
 
 body {
     min-height: 100vh;
-    background-color: var(--white);
+    background-color: var(--lightgray);
     overflow-x: hidden ;
 }
 
@@ -643,13 +643,15 @@ ul {
     padding: 20px;
     line-height: 40px;
     margin: 0 90px;
-
+    background-color: var(--lightgray);
+    color: var(--black);
 }
 
 .about-descrip{
-    color: red;
+    color: var(--dark-orange-text);
     text-align: center;
     padding: 20px;
+    background-color: var(--lightgray);
 }
 
 

@@ -1,6 +1,9 @@
 const themeSwitch = document.querySelector(".theme-switch");
+const body = document.querySelector("body");
 const homeScreen = document.querySelector(".home-section");
 const homeHeader = document.querySelector(".header");
+const aboutDesrip = document.querySelector(".about-descrip");
+const aboutDesripText = document.querySelector(".about-descrip-text");
 
 const hideEnter = document.querySelector(".hide");
 
@@ -8,7 +11,11 @@ const hideEnter = document.querySelector(".hide");
 themeSwitch.onclick = function() {
     homeScreen.classList.toggle("dark");
     homeHeader.classList.toggle("dark");
-   }
+    aboutDesrip.classList.toggle("dark");
+    aboutDesripText.classList.toggle("dark");
+    body.classList.toggle("dark");
+  }
+
 //hide enter page
 hideEnter.addEventListener("click", function() {
     this.classList = 'hide';
