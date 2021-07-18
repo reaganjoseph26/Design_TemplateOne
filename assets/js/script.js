@@ -1,25 +1,22 @@
-// $(document).ready(function() {
-//     $('#home-hello').animate({opacity: 1}, 2000, function(){
-//          $('#home-slogan').animate({opacity: 1}, 2000, function(){
-//               $('#home-slogan2').animate({opacity: 1}, 2000, function(){
-         
-//               })
-//          })
-//     });
-
-   
-// });
-
 const themeSwitch = document.querySelector(".theme-switch");
 const homeScreen = document.querySelector(".home-section");
 const homeHeader = document.querySelector(".header");
 
+const hideEnter = document.querySelector(".hide");
+
 //themeSwitch toggle
 themeSwitch.onclick = function() {
- homeScreen.classList.toggle("dark");
- homeHeader.classList.toggle("dark");
-}
+    homeScreen.classList.toggle("dark");
+    homeHeader.classList.toggle("dark");
+   }
+//hide enter page
+hideEnter.addEventListener("click", function() {
+    this.classList = 'hide';
+    AOS.init()
+  });
 
+
+// side navigation//
 
 // const list = document.querySelectorAll(".list")
 // const menuToggle = document.querySelector(".toggle")

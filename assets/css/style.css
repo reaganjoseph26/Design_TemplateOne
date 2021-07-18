@@ -16,6 +16,7 @@
     --turquoise: #70a5a1;
     --black: #000000;
     --blue: #0000ff;
+    --dark-orange-text: #000000;
 }
 
 /* Dark Mode */
@@ -27,6 +28,7 @@
     --turquoise: #EE7752;
     --black: #fff;
     --blue: #0000ff;
+    --dark-orange-text: #EE7752;
 }
 
 body {
@@ -227,6 +229,15 @@ ion-icon {
     }
 }
 
+.hide:before {
+    opacity: 1;
+}
+.hide::after {
+    transform: translateY(100%);
+    opacity: 0;
+    overflow: hidden;
+}
+
 /* glass cards */
 
 .cards-container {
@@ -290,7 +301,7 @@ ion-icon {
     top: -30px;
     right: 30px;
     font-size: 8em;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.1);
     pointer-events: none;
 }
 
@@ -516,7 +527,7 @@ ul {
     font-size: 55px;
     font-weight: 600;
     margin: 0;
-    color: var(--black);
+    color: var(--dark-orange-text)
 }
 
 .home-section .home-text .home-h1 {
@@ -602,16 +613,6 @@ ul {
     margin: 0 3px 8px;
 }
 
-.effect-3 {
-    width: 180px;
-    height: 180px;
-    border: 25px solid var(--turquoise);
-    border-radius: 50%;
-    left: 50%;
-    top: -120px;
-    animation: leftBounce 3s ease-in-out infinite;
-}
-
 .effect-4 {
     border-top: 30px solid transparent;
     border-left: 30px solid var(--white);
@@ -630,6 +631,27 @@ ul {
     opacity: 0.5;
 
 }
+
+/* Who am I section*/
+
+.about-descrip-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 40px;
+    margin: 0 90px;
+
+}
+
+.about-descrip{
+    color: red;
+    text-align: center;
+    padding: 20px;
+}
+
 
 
 
