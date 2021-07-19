@@ -37,6 +37,13 @@ body {
     overflow-x: hidden ;
 }
 
+/* multiple highlited text*/
+
+.highlight-text {
+    color: var(--orange);
+}
+
+
 /* Side Navigation*/
 
 /* .navigation {
@@ -240,14 +247,23 @@ ion-icon {
 
 /* glass cards */
 
+.featured-projects {
+    color: var(--dark-orange-text);
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--lightgray);
+}
+
 .cards-container {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     flex-wrap: wrap;
-    background: linear-gradient(-45deg, var(--orange), var(--turquoise), var(--black), var(--blue));
+    background-color: var(--lightgray);
     z-index: 1;
+    padding: 50px 20px;
+
 }
 
  .card {
@@ -635,24 +651,49 @@ ul {
 /* Who am I section*/
 
 .about-descrip-text {
-    display: flex;
+    display:flow-root;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+    padding: 50px 20px;
     line-height: 40px;
     margin: 0 90px;
     background-color: var(--lightgray);
     color: var(--black);
+    text-align: -webkit-center;
 }
 
 .about-descrip{
     color: var(--dark-orange-text);
     text-align: center;
-    padding: 20px;
+    padding: 0 20px;
     background-color: var(--lightgray);
 }
+
+/* work section */
+
+.work-header {
+    color: var(--dark-orange-text);
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--lightgray);
+}
+
+.work-section {
+    text-align: center;
+    background-color: var(--lightgray);
+    color: var(--black);
+}
+
+.mail-link {
+   padding: 20px;
+}
+
+/* footer*/
+footer {
+    padding: 40px;
+}
+
 
 
 
