@@ -22,7 +22,6 @@ hideEnter.addEventListener("click", function() {
     AOS.init()
   });
 
-
 // side navigation//
 
 // const list = document.querySelectorAll(".list")

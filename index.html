@@ -30,20 +30,7 @@
         </div>
     </header>
 
-    <!-- <nav class="nav-menu">
-        <div class="nav-close outter-shadow hover-in-shadow">&times;</div>
-        <div class="nav-menu-inner">
-            <ul>
-                <li><a href="#" class=" inner-shadow active">Home</a></li>
-                <li><a href="#" class="hover-in-shadow">Who am I?</a></li>
-                <li><a href="#" class="hover-in-shadow">Portfolio</a></li>
-                <li><a href="#" class="hover-in-shadow">Contact</a></li>
-                <li><a href="#" class="hover-in-shadow">Services</a></li>
-            </ul>
-        </div>
-    </nav> -->
-
-    <section class="home-section section">
+    <section class="home-section section hide-body">
 
         <div class="effect-wrap">
             <div class="effect effect-1"></div>
@@ -98,6 +85,13 @@
                 <h3 class="card-h3">Movie Hunt</h3>
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quo doloremque ut? Consequuntur optio hic, fugit inventore iusto nulla facere dolores assumenda rem nemo veritatis, repudiandae rerum? Facere, in unde.</p>
                 <a href="" class="card-links">Read More</a>
+                <div id="pop-up">
+                    <div class="pop-up-content">
+                        <img src="">
+                        <h2>Technologies Used</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque cupiditate vero laboriosam culpa facilis quidem officia, at consectetur, ipsam eos, necessitatibus fuga animi omnis doloribus nam laborum. Ex, eaque aliquid?</p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -121,7 +115,7 @@
     </section>
 
     <h2 class="work-header" data-aos="fade-right" data-aos-duration="800" data-aos-offset="100">Work Oppurtunities</h2>
-    <section class="work-section" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100">
+    <section class="work-section" data-aos="zoom-in-up" data-aos-duration="800" data-aos-offset="100">
         <p>Currently I am working as a freelance developer. If you want to discuss work oppurtunities, project ideas, or just to chat, my inbox is open.</p>
         <br>
         <a class="mail-link" href ="mailto:reaganjoseph26@yahoo.com" target="_tab">Let's Chat!<i class="far fa-envelope right"></i></a>
@@ -137,9 +131,40 @@
             <a href="https://github.com/reaganjoseph26" target="_blank"><i class="fab fa-github"></i></a>
         </div>
     </footer>       
+    
+    <!--Gsap-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--AOS-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init();</script>
+    <!--VANILLA TILT-->
+    <script type="text/javascript" src="assets/js/vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".card"),{
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 1,
+        });
+        </script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
 
+ <!-- <nav class="nav-menu">
+        <div class="nav-close outter-shadow hover-in-shadow">&times;</div>
+        <div class="nav-menu-inner">
+            <ul>
+                <li><a href="#" class=" inner-shadow active">Home</a></li>
+                <li><a href="#" class="hover-in-shadow">Who am I?</a></li>
+                <li><a href="#" class="hover-in-shadow">Portfolio</a></li>
+                <li><a href="#" class="hover-in-shadow">Contact</a></li>
+                <li><a href="#" class="hover-in-shadow">Services</a></li>
+            </ul>
+        </div>
+    </nav> -->
 
-    <!-- <div class="navigation">
+<!-- <div class="navigation">
         <ul>
             <li class="list active">
                 <b></b>
@@ -195,22 +220,3 @@
 
     <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
-    
-      <!--Gsap-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!--AOS-->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script> AOS.init();</script>
-    <!--VANILLA TILT-->
-    <script type="text/javascript" src="assets/js/vanilla-tilt.js"></script>
-    <script>
-        VanillaTilt.init(document.querySelectorAll(".card"),{
-            max: 25,
-            speed: 400,
-            glare: true,
-            "max-glare": 1,
-        });
-        </script>
-    <script src="assets/js/script.js"></script>
-</body>
-</html>
