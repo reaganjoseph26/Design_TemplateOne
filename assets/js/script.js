@@ -9,11 +9,11 @@ const hideEnter = document.querySelector(".hide");
 
 //themeSwitch toggle
 themeSwitch.onclick = function() {
-    homeScreen.classList.toggle("dark");
-    homeHeader.classList.toggle("dark");
-    aboutDesrip.classList.toggle("dark");
-    aboutDesripText.classList.toggle("dark");
-    body.classList.toggle("dark");
+    homeScreen.classList.toggle("light");
+    homeHeader.classList.toggle("light");
+    aboutDesrip.classList.toggle("light");
+    aboutDesripText.classList.toggle("light");
+    body.classList.toggle("light");
   }
 
 //hide enter page

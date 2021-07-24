@@ -9,21 +9,11 @@
 }
 
 /* Color Scheme*/
+
+/* Dark and Light mode were both swap */
+
+/* Dark Scheme*/
 :root {
-    --white: #fff;
-    --lightgray: #d3d3d3;
-    --orange: #EE7752;
-    --turquoise: #70a5a1;
-    --black: #000000;
-    --blue: #0000ff;
-    --dark-orange-text: #000000;
-    --black2: #000000; 
-    --white-background: #fff;
-}
-
-/* Dark Mode */
-
-.dark {
     --white: #fff;
     --lightgray: #000000;
     --orange: #70a5a1;
@@ -33,6 +23,20 @@
     --dark-orange-text: #EE7752;
     --black2: #000000; 
     --white-background: #EE7752;
+}
+
+/* Light Mode */
+
+.light {
+    --white: #fff;
+    --lightgray: #d3d3d3;
+    --orange: #EE7752;
+    --turquoise: #70a5a1;
+    --black: #000000;
+    --blue: #0000ff;
+    --dark-orange-text: #000000;
+    --black2: #000000; 
+    --white-background: #fff;
 }
 
 body {
@@ -52,16 +56,13 @@ body {
     width: 100%;
     height: 100vh;
     color: var(--white);
-    /* background: linear-gradient(-45deg, var(--orange), var(--turquoise), var(--blue), var(--lightgray)); */
-    background-color: black;
+    /* background: linear-gradient(-55deg, var(--turquoise), var(--lightgray),var(--black), var(--orange)); */
+    background: linear-gradient(-45deg, #000000, #EE7752);
+    /* background-color: black; */
     position: relative;
     background-size: 400% 400%;
-    /* animation: change 10s ease-out infinite; */
+    animation: change 5s ease-out infinite;
 }
-
-/* .enter-link {
-    color: var(--white);
-} */
 
 .div {
     height: 200px;
@@ -83,7 +84,7 @@ body {
     height: 200%;
     width: 200%;
     background-image: conic-gradient(
-        #04b0ee 20deg,
+        #EE7752 20deg,
         transparent 120deg
     );
     position: absolute;
@@ -94,15 +95,15 @@ body {
 }
 
 .div:after {
-    content: 'Hi';
+    content: 'Welcome';
     height: 94%;
     width: 94%;
     position: absolute;
-    background-color: #1c1b29;
+    background-color: #000000;
     border-radius: 5px;
     top: 3%;
     left: 3%;
-    color: #04b0ee;
+    color: #EE7752;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,18 +115,6 @@ body {
     100% {
         transform: rotate(360deg);
     }
-}
-
-/* .animation-h1 {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border: 2px solid var(--white);
-    padding: 5rem 10rem; 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: all;
 }
 
 @keyframes change {
@@ -140,7 +129,7 @@ body {
     100%{
         background-position: 0 50%;
     }
-} */
+}
 
 .hide:before {
     opacity: 1;
@@ -283,12 +272,14 @@ body {
     transition: all 0.3s ease;
 }
 
-.theme-switch:before  {
+.light .theme-switch:before  {
     font-family: 'Font Awesome 5 Free';
     content: "\f186";
+    box-shadow: none;
+    color: #000000;
 }
 
-.dark .theme-switch:before {
+.theme-switch:before {
     font-family: 'Font Awesome 5 Free';
     content: '\f185';
     color: var(--turquoise);
