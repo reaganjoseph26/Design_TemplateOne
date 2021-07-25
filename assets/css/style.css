@@ -181,7 +181,8 @@ body {
 
 .card-text {
     font-size: 1em;
-    font-weight: 300;
+    color: var(--black);
+    font-weight: 100;
 }
 
 .card-links {
@@ -189,7 +190,7 @@ body {
     display: inline-block;
     padding: 20px 8px;
     margin-top: 15px;
-    background: linear-gradient(-45deg, var(--orange), var(--turquoise), var(--blue), var(--lightgray));
+    background: linear-gradient(-45deg, var(--turquoise), var(--lightgray));
     border-radius: 20px;
     color: var(--black);
     text-decoration: none;
@@ -209,14 +210,28 @@ body {
     top: -30px;
     right: 30px;
     font-size: 8em;
-    color: rgba(255, 255, 255, 0.1);
+    color: rgba(238, 119, 82, 0.5 );
     pointer-events: none;
+    z-index: -1;
 }
 
 .card-h3 {
     font-size: 1.8em;
     color: var(--black);
     z-index: 1;
+}
+
+.card-links:hover {
+    color: var(--orange);
+    cursor: pointer;
+}
+
+.card .content img {
+    position: relative;
+    top: 20px;
+}
+.card .content a {
+    top: 20px;
 }
 
 /* about section*/
@@ -509,7 +524,7 @@ ul {
 }
 
 .mail-link {
-    background: linear-gradient(-45deg, var(--orange), var(--turquoise), var(--blue), var(--lightgray));
+    background: linear-gradient(-45deg, var(--turquoise), var(--lightgray));
     text-decoration: none;
     font-size: 20px;
     color: var(--black);
@@ -537,6 +552,58 @@ footer .footer-container a {
     padding: 10px;
     line-height: 40px;
 }
+
+/* POPUP CARD */
+#blur.cardActive {
+    filter: blur(20px);
+}
+
+#popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    color: #fff;
+    background: black;
+    border: 2px solid #EE7752;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: inherit;
+    box-shadow: 0 5px 30px rgba(0,0,0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+#popup .popup-text {
+    line-height: 40px;
+}
+
+#popup .popup-links {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#popup .popup-links a {
+    text-decoration: none;
+    color: var(--turquoise);
+    font-size: 18px;
+}
+
+#popup.cardActive {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+    top: 50%;
+}
+
+
 
 
 

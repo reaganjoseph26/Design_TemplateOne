@@ -22,6 +22,17 @@ hideEnter.addEventListener("click", function() {
     AOS.init()
   });
 
+// card read more func
+ function cardToggle() {
+   var blur = document.querySelector("#blur");
+   blur.classList.toggle("cardActive");
+   
+   var popup = document.querySelector("#popup");
+   popup.classList.toggle("cardActive");
+ };
+
+
+
 // side navigation//
 
 // const list = document.querySelectorAll(".list")
