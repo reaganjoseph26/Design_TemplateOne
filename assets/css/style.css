@@ -77,6 +77,7 @@ body {
     border-radius: 5px;
     overflow: hidden;
     background-color: #1c1b29;
+    cursor: pointer;
 }
 
 .div:before {
@@ -554,11 +555,11 @@ footer .footer-container a {
 }
 
 /* POPUP CARD */
-#blur.cardActive {
+.blur {
     filter: blur(20px);
 }
 
-#popup {
+.popup {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -579,32 +580,30 @@ footer .footer-container a {
     border-radius: 10px;
 }
 
-#popup .popup-text {
+.popup .popup-text {
     line-height: 40px;
 }
 
-#popup .popup-links {
+.popup .popup-links {
     padding: 20px;
     display: flex;
     justify-content: space-around;
     width: 100%;
 }
 
-#popup .popup-links a {
+.popup .popup-links a {
     text-decoration: none;
     color: var(--turquoise);
     font-size: 18px;
 }
 
-#popup.cardActive {
+.popup.cardActive {
     opacity: 1;
     visibility: visible;
     transition: 0.5s;
     top: 50%;
+    z-index: 1;
 }
-
-
-
 
 
 

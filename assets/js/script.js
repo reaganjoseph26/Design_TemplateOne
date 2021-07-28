@@ -7,6 +7,10 @@ const aboutDesripText = document.querySelector(".about-descrip-text");
 
 const hideEnter = document.querySelector(".hide");
 
+const cardContainer = document.querySelector(".cards-container");
+const popup = document.querySelector(".popup");
+const cardLinks = document.querySelectorAll(".card-links")
+
 //themeSwitch toggle
 themeSwitch.onclick = function() {
     homeScreen.classList.toggle("light");
@@ -22,16 +26,48 @@ hideEnter.addEventListener("click", function() {
     AOS.init()
   });
 
-// card read more func
- function cardToggle() {
-   var blur = document.querySelector("#blur");
-   blur.classList.toggle("cardActive");
-   
-   var popup = document.querySelector("#popup");
-   popup.classList.toggle("cardActive");
+//loop through cardLinks
+//   for (var i = 0 ; i < cardLinks.length; i++) {
+//     cardLinks[i].addEventListener('click' ,  function() {
+//       popup.classList.toggle("cardActive");
+//       // body.classList.toggle("blur");
+//     }) 
+//  };
+
+function cardToggle() {
+  //loop through the cardlinks
+  for (var i = 0 ; i < cardLinks.length; i++) {
+    cardLinks[i].addEventListener('click' ,  function() {
+      //blur body based on click of any cardLink
+      body.classList.toggle("blur");
+      //have project info for specific card popup
+
+      popup + ("#").attr('p').classList.toggle("cardActive");
+
+    //   $('#' + $(this).attr('data-popup')).show();
+    // });
+
+    }) 
  };
 
+};
 
+cardToggle()
+
+
+
+
+// card read more func
+// function cardToggle() {
+//    card.classList.toggle = ("blur");
+//    popup.classList.toggle("cardActive");
+// };
+
+// cardToggle()
+
+
+
+ // function that pops up card base on different project click
 
 // side navigation//
 
