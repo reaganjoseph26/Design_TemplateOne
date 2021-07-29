@@ -29,19 +29,19 @@ hideEnter.addEventListener("click", function() {
 function cardToggle() {
   //loop through the cardlinks
   for (var i = 0 ; i < cardLinks.length; i++) {
-    //listen for any cardLink lick
+    //listen for any cardLink click
     cardLinks[i].addEventListener('click' , function(event) {
-      console.log("clicked", event.target);
-      //remove active class from all
+      //remove active class from all popup divs
       popup.forEach(popup => {
         popup.classList.remove("active");
       });
-      //identify which card we are clicking on
-      const selectedCard = event.target.dataset.popupId;
-      console.log(selectedCard)
-      //add active class to target card
+      //identify which card we are clicking on by getting that specific id
+      const selectedCard = document.getElementById(event.target.dataset.popupId);
+      //add active class to target popup
       if(selectedCard) {
-        selectedCard.popup.classList.add("active");
+        selectedCard.classList.add("active");
+      } else {
+        console.error("No modal associated with this project")
       }
     }) 
  };
