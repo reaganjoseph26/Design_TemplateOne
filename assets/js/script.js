@@ -8,7 +8,7 @@ const aboutDesripText = document.querySelector(".about-descrip-text");
 const hideEnter = document.querySelector(".hide");
 
 // const cardContainer = document.querySelector(".cards-container");
-const popup = document.querySelectorAll(".popup");
+const popup = document.querySelector(".popup");
 const cardLinks = document.querySelectorAll(".card-links")
 
 //themeSwitch toggle
@@ -35,24 +35,34 @@ hideEnter.addEventListener("click", function() {
 //     }) 
 //  };
 
-
 function cardToggle() {
   //loop through the cardlinks
   for (var i = 0 ; i < cardLinks.length; i++) {
     //listen for any cardLink lick
     cardLinks[i].addEventListener('click' , function() {
 
-      //have project info for specific card popup
-
       let projectOne = document.querySelector("#p1");
       let projectTwo = document.querySelector("#p2");
-      let projectThree = document.querySelector("#p3")
+      let projectThree = document.querySelector("#p3");
 
-      projectsArr = [projectOne, projectTwo, projectThree];
-      projectsArr.forEach(project =>  {
-        //this is just displaying each div
-        console.log(project)
-      })
+      projectsArr = [projectOne, projectTwo, projectThree]
+
+      // console.log(event.target);
+      if(event.target === null) {
+        return
+      } else {
+        projectsArr.forEach(project => {
+          project.classList.toggle("active");
+        });
+      }
+      // event.target.classList.toggle("cardActive")
+
+      //have project info for specific card popup
+
+      // projectsArr.forEach(project =>  {
+      //   //this is just displaying each div
+      //   console.log(project)
+      // })
     }) 
  };
 

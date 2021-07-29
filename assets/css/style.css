@@ -597,7 +597,7 @@ footer .footer-container a {
     font-size: 18px;
 }
 
-.popup.cardActive {
+.popup .active {
     opacity: 1;
     visibility: visible;
     transition: 0.5s;
