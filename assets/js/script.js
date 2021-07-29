@@ -7,8 +7,8 @@ const aboutDesripText = document.querySelector(".about-descrip-text");
 
 const hideEnter = document.querySelector(".hide");
 
-const cardContainer = document.querySelector(".cards-container");
-const popup = document.querySelector(".popup");
+// const cardContainer = document.querySelector(".cards-container");
+const popup = document.querySelectorAll(".popup");
 const cardLinks = document.querySelectorAll(".card-links")
 
 //themeSwitch toggle
@@ -27,6 +27,7 @@ hideEnter.addEventListener("click", function() {
   });
 
 //loop through cardLinks
+
 //   for (var i = 0 ; i < cardLinks.length; i++) {
 //     cardLinks[i].addEventListener('click' ,  function() {
 //       popup.classList.toggle("cardActive");
@@ -34,40 +35,30 @@ hideEnter.addEventListener("click", function() {
 //     }) 
 //  };
 
+
 function cardToggle() {
   //loop through the cardlinks
   for (var i = 0 ; i < cardLinks.length; i++) {
-    cardLinks[i].addEventListener('click' ,  function() {
-      //blur body based on click of any cardLink
-      body.classList.toggle("blur");
+    //listen for any cardLink lick
+    cardLinks[i].addEventListener('click' , function() {
+
       //have project info for specific card popup
 
-      popup + ("#").attr('p').classList.toggle("cardActive");
+      let projectOne = document.querySelector("#p1");
+      let projectTwo = document.querySelector("#p2");
+      let projectThree = document.querySelector("#p3")
 
-    //   $('#' + $(this).attr('data-popup')).show();
-    // });
-
+      projectsArr = [projectOne, projectTwo, projectThree];
+      projectsArr.forEach(project =>  {
+        //this is just displaying each div
+        console.log(project)
+      })
     }) 
  };
 
 };
 
 cardToggle()
-
-
-
-
-// card read more func
-// function cardToggle() {
-//    card.classList.toggle = ("blur");
-//    popup.classList.toggle("cardActive");
-// };
-
-// cardToggle()
-
-
-
- // function that pops up card base on different project click
 
 // side navigation//
 
