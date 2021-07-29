@@ -8,7 +8,7 @@ const aboutDesripText = document.querySelector(".about-descrip-text");
 const hideEnter = document.querySelector(".hide");
 
 // const cardContainer = document.querySelector(".cards-container");
-const popup = document.querySelector(".popup");
+const popup = document.querySelectorAll(".popup");
 const cardLinks = document.querySelectorAll(".card-links")
 
 //themeSwitch toggle
@@ -26,46 +26,25 @@ hideEnter.addEventListener("click", function() {
     AOS.init()
   });
 
-//loop through cardLinks
-
-//   for (var i = 0 ; i < cardLinks.length; i++) {
-//     cardLinks[i].addEventListener('click' ,  function() {
-//       popup.classList.toggle("cardActive");
-//       // body.classList.toggle("blur");
-//     }) 
-//  };
-
 function cardToggle() {
   //loop through the cardlinks
   for (var i = 0 ; i < cardLinks.length; i++) {
     //listen for any cardLink lick
-    cardLinks[i].addEventListener('click' , function() {
-
-      let projectOne = document.querySelector("#p1");
-      let projectTwo = document.querySelector("#p2");
-      let projectThree = document.querySelector("#p3");
-
-      projectsArr = [projectOne, projectTwo, projectThree]
-
-      // console.log(event.target);
-      if(event.target === null) {
-        return
-      } else {
-        projectsArr.forEach(project => {
-          project.classList.toggle("active");
-        });
+    cardLinks[i].addEventListener('click' , function(event) {
+      console.log("clicked", event.target);
+      //remove active class from all
+      popup.forEach(popup => {
+        popup.classList.remove("active");
+      });
+      //identify which card we are clicking on
+      const selectedCard = event.target.dataset.popupId;
+      console.log(selectedCard)
+      //add active class to target card
+      if(selectedCard) {
+        selectedCard.popup.classList.add("active");
       }
-      // event.target.classList.toggle("cardActive")
-
-      //have project info for specific card popup
-
-      // projectsArr.forEach(project =>  {
-      //   //this is just displaying each div
-      //   console.log(project)
-      // })
     }) 
  };
-
 };
 
 cardToggle()
