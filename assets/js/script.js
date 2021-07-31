@@ -7,7 +7,7 @@ const aboutDesripText = document.querySelector(".about-descrip-text");
 
 const hideEnter = document.querySelector(".hide");
 
-// const cardContainer = document.querySelector(".cards-container");
+const cardContainer = document.querySelector(".cards-container");
 const popup = document.querySelectorAll(".popup");
 const cardLinks = document.querySelectorAll(".card-links")
 
